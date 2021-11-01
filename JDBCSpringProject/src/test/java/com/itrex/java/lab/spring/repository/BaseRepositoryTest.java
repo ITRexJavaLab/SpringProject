@@ -5,6 +5,7 @@ import static com.itrex.java.lab.spring.properties.Properties.H2_URL;
 import static com.itrex.java.lab.spring.properties.Properties.H2_USER;
 
 import com.itrex.java.lab.spring.service.FlywayService;
+import com.itrex.java.lab.spring.util.Application;
 import org.h2.jdbcx.JdbcConnectionPool;
 import org.junit.After;
 import org.junit.Before;
@@ -16,7 +17,7 @@ public abstract class BaseRepositoryTest {
 
     public BaseRepositoryTest () {
         flywayService = new FlywayService();
-        connectionPool = JdbcConnectionPool.create(H2_URL, H2_USER, H2_PASSWORD);
+        connectionPool = Application.INSTANCE.jdbcConnectionPool();
     }
 
     @Before

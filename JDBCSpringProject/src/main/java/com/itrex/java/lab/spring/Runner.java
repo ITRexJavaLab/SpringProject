@@ -1,9 +1,6 @@
 package com.itrex.java.lab.spring;
 
-import static com.itrex.java.lab.spring.properties.Properties.H2_PASSWORD;
-import static com.itrex.java.lab.spring.properties.Properties.H2_URL;
-import static com.itrex.java.lab.spring.properties.Properties.H2_USER;
-
+import com.itrex.java.lab.spring.config.MyApplicationContextConfiguration;
 import com.itrex.java.lab.spring.entity.User;
 import com.itrex.java.lab.spring.repository.UserRepository;
 import com.itrex.java.lab.spring.repository.impl.JDBCUserRepositoryImpl;
@@ -12,21 +9,26 @@ import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.h2.jdbcx.JdbcConnectionPool;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import javax.sql.DataSource;
 
 public class Runner {
 
     public static void main(String[] args) {
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(MyApplicationContextConfiguration.class);
+
+        JdbcConnectionPool jdbcConnectionPool = ctx.getBean(JdbcConnectionPool.class);
+        UserRepository userRepository = ctx.getBean(UserRepository.class);
+
         System.out.println("===================START APP======================");
         System.out.println("================START MIGRATION===================");
         FlywayService flywayService = new FlywayService();
         flywayService.migrate();
 
-        System.out.println("============CREATE CONNECTION POOL================");
-        JdbcConnectionPool jdbcConnectionPool = JdbcConnectionPool.create(H2_URL, H2_USER, H2_PASSWORD);
-
-        System.out.println("=============CREATE UserRepository================");
-        UserRepository userRepository = new JDBCUserRepositoryImpl(jdbcConnectionPool);
         workWithJDBC(userRepository);
 
         System.out.println("=========CLOSE ALL UNUSED CONNECTIONS=============");

@@ -2,6 +2,11 @@ package com.itrex.java.lab.spring.repository.impl;
 
 import com.itrex.java.lab.spring.entity.User;
 import com.itrex.java.lab.spring.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Repository;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,6 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.sql.DataSource;
 
+@Repository
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class JDBCUserRepositoryImpl implements UserRepository {
 
     private static final String ID_COLUMN = "id";
@@ -22,7 +29,7 @@ public class JDBCUserRepositoryImpl implements UserRepository {
 
     private final DataSource dataSource;
 
-    public JDBCUserRepositoryImpl(DataSource dataSource) {
+    public JDBCUserRepositoryImpl(@Autowired DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
