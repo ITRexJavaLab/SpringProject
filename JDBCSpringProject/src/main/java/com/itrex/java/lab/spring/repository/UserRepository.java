@@ -1,6 +1,6 @@
-package com.itrex.java.lab.nospring.repository;
+package com.itrex.java.lab.spring.repository;
 
-import com.itrex.java.lab.nospring.entity.User;
+import com.itrex.java.lab.spring.entity.User;
 import java.util.List;
 
 public interface UserRepository {

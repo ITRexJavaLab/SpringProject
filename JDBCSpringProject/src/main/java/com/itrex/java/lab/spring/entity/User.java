@@ -1,4 +1,4 @@
-package com.itrex.java.lab.nospring.entity;
+package com.itrex.java.lab.spring.entity;
 
 import java.sql.Timestamp;
 

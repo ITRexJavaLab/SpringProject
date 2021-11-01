@@ -1,13 +1,13 @@
-package com.itrex.java.lab.nospring;
+package com.itrex.java.lab.spring;
 
-import static com.itrex.java.lab.nospring.properties.Properties.H2_PASSWORD;
-import static com.itrex.java.lab.nospring.properties.Properties.H2_URL;
-import static com.itrex.java.lab.nospring.properties.Properties.H2_USER;
+import static com.itrex.java.lab.spring.properties.Properties.H2_PASSWORD;
+import static com.itrex.java.lab.spring.properties.Properties.H2_URL;
+import static com.itrex.java.lab.spring.properties.Properties.H2_USER;
 
-import com.itrex.java.lab.nospring.entity.User;
-import com.itrex.java.lab.nospring.repository.UserRepository;
-import com.itrex.java.lab.nospring.repository.impl.JDBCUserRepositoryImpl;
-import com.itrex.java.lab.nospring.service.FlywayService;
+import com.itrex.java.lab.spring.entity.User;
+import com.itrex.java.lab.spring.repository.UserRepository;
+import com.itrex.java.lab.spring.repository.impl.JDBCUserRepositoryImpl;
+import com.itrex.java.lab.spring.service.FlywayService;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.ArrayList;

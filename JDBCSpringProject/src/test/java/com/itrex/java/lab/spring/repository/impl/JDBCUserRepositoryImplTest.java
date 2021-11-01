@@ -1,10 +1,10 @@
-package com.itrex.java.lab.nospring.repository.impl;
+package com.itrex.java.lab.spring.repository.impl;
 
 import static org.junit.Assert.assertFalse;
 
-import com.itrex.java.lab.nospring.entity.User;
-import com.itrex.java.lab.nospring.repository.BaseRepositoryTest;
-import com.itrex.java.lab.nospring.repository.UserRepository;
+import com.itrex.java.lab.spring.entity.User;
+import com.itrex.java.lab.spring.repository.BaseRepositoryTest;
+import com.itrex.java.lab.spring.repository.UserRepository;
 import java.util.List;
 import org.junit.Test;
 

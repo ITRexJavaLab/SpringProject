@@ -1,9 +1,9 @@
-package com.itrex.java.lab.nospring.service;
+package com.itrex.java.lab.spring.service;
 
-import static com.itrex.java.lab.nospring.properties.Properties.H2_PASSWORD;
-import static com.itrex.java.lab.nospring.properties.Properties.H2_URL;
-import static com.itrex.java.lab.nospring.properties.Properties.H2_USER;
-import static com.itrex.java.lab.nospring.properties.Properties.MIGRATIONS_LOCATION;
+import static com.itrex.java.lab.spring.properties.Properties.H2_PASSWORD;
+import static com.itrex.java.lab.spring.properties.Properties.H2_URL;
+import static com.itrex.java.lab.spring.properties.Properties.H2_USER;
+import static com.itrex.java.lab.spring.properties.Properties.MIGRATIONS_LOCATION;
 
 import org.flywaydb.core.Flyway;
 

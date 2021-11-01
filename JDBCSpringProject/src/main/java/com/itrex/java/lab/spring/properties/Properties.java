@@ -1,4 +1,4 @@
-package com.itrex.java.lab.nospring.properties;
+package com.itrex.java.lab.spring.properties;
 
 public class Properties {
 

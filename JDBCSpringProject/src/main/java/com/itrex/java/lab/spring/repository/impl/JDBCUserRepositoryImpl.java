@@ -1,7 +1,7 @@
-package com.itrex.java.lab.nospring.repository.impl;
+package com.itrex.java.lab.spring.repository.impl;
 
-import com.itrex.java.lab.nospring.entity.User;
-import com.itrex.java.lab.nospring.repository.UserRepository;
+import com.itrex.java.lab.spring.entity.User;
+import com.itrex.java.lab.spring.repository.UserRepository;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

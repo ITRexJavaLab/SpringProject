@@ -1,10 +1,10 @@
-package com.itrex.java.lab.nospring.repository;
+package com.itrex.java.lab.spring.repository;
 
-import static com.itrex.java.lab.nospring.properties.Properties.H2_PASSWORD;
-import static com.itrex.java.lab.nospring.properties.Properties.H2_URL;
-import static com.itrex.java.lab.nospring.properties.Properties.H2_USER;
+import static com.itrex.java.lab.spring.properties.Properties.H2_PASSWORD;
+import static com.itrex.java.lab.spring.properties.Properties.H2_URL;
+import static com.itrex.java.lab.spring.properties.Properties.H2_USER;
 
-import com.itrex.java.lab.nospring.service.FlywayService;
+import com.itrex.java.lab.spring.service.FlywayService;
 import org.h2.jdbcx.JdbcConnectionPool;
 import org.junit.After;
 import org.junit.Before;
