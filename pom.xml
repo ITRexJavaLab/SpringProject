@@ -11,6 +11,7 @@
   <modules>
     <module>JDBCSpringProject</module>
     <module>InjectRandomProject</module>
+    <module>ColorFrameProject</module>
     <module>TerminatorQuoterProject</module>
   </modules>
 
