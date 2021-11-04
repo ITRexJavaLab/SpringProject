@@ -10,9 +10,13 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>JDBCSpringProject</module>
+    <module>JDBCSpringProject2</module>
     <module>InjectRandomProject</module>
+    <module>InjectRandomProject2</module>
     <module>ColorFrameProject</module>
+    <module>ColorFrameProject2</module>
     <module>TerminatorQuoterProject</module>
+    <module>TerminatorQuoterProject2</module>
   </modules>
 
   <properties>
